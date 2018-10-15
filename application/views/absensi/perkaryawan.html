@@ -1,0 +1,171 @@
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    {breadcrum}
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+      <div class="col-md-12">
+		<div class="box">
+			<form method="POST" action="{base}/{class}/{function}">
+				<div class="box-header">
+				  <h3 class="box-title">Per Karyawan</h3>
+				  <!-- <button class="btn btn-primary btn-sm pull-right" onclick="window.location='{base}/{class}/add'"> -->
+					<!-- <i class="fa fa-plus"></i> Tambah {class} -->
+				  <!-- </button> -->
+
+				  <!-- <div class="box-tools"> -->
+					<!-- <ul class="pagination pagination-sm no-margin pull-right"> -->
+					  <!-- <li><a href="#">«</a></li> -->
+					  <!-- <li><a href="#">1</a></li> -->
+					  <!-- <li><a href="#">2</a></li> -->
+					  <!-- <li><a href="#">3</a></li> -->
+					  <!-- <li><a href="#">»</a></li> -->
+					<!-- </ul> -->
+				  <!-- </div> -->
+				</div>
+				<!-- /.box-header --> 
+				<div class="box-body no-padding text-center"> 
+					<div class="col-md-5">  
+						<div class="form-group">
+						<label> Department </label>
+							<select class="form-control text-center" name="department_id">
+								<option class="text-center" value="all">-- Pilih --</option>
+								{all_department}
+								<option class="text-center" value="{department_id}"> {department_nama} </option>
+								{/all_department}
+							</select>
+						</div>
+						<div class="form-group">
+							<label> Nama Karyawan </label>
+							<select class="form-control text-center" name="karyawan_id">
+								<option class="text-center" value="all">-- Pilih --</option>
+								{all_karyawan}
+								<option class="text-center" value="{karyawan_id}"> {nama_lengkap} </option>
+								{/all_karyawan}
+							</select>
+						</div>
+						<div class="form-group">
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<i class="fa fa-calendar"></i>
+						  </div>
+						  <input class="form-control text-center" name="periode" id="rangeabsen" type="text">
+						</div>
+						</div>
+						<!-- <div class="form-group"> -->
+							<!-- <label> Periode Absensi </label> -->
+							<!-- <input class="form-control ambiltanggal" name="mulai" placeholder="dd/mm/yyyy" type="text"> -->
+							
+						<!-- </div> -->
+						<div class="form-group">  
+							<button class="btn btn-primary btn-block"> Cari </button>
+						</div>
+						
+					</div>
+					<div class="col-md-4">			
+					<table class="table text-left">
+                    <tbody>
+						<tr>
+							<td>
+								<label>Summary Absensi</label>
+							</td>
+						</tr>
+                    <tr>
+                        <td>  Jumlah Keterlambatan   </td>
+                        <td>:</td>
+                        <td>{telat}</td>
+                    </tr>
+                    <tr>
+                        <td>
+							Jumlah Pulang Cepat
+                        </td>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            {kecepetan}</td> 
+                    </tr>
+                </tbody>
+				</table>
+				
+					</div>
+					<style>
+						tbody.ket>tr>td{padding-top:1%;padding-bottom:1%; font-size:9pt;}
+					</style>
+					<div class="col-md-3 text-left">
+						<table class="table">
+							<thead><tr> <th colspan="3">Keterangan : </th></tr></thead>
+							<tbody class="ket">
+								<tr><td> H </td><td>:</td><td> Hadir</td></tr>
+								<tr><td>HT </td><td>:</td><td> Hadir Terlambat</td></tr>
+								<tr><td> A </td><td>:</td><td>Alspanha / Bolos</td></tr>
+								<tr><td>C </td><td>:</td><td>Cuti </td></tr>
+								<tr><td>I </td><td>:</td><td>Ijin </td></tr>
+								<tr><td> L </td><td>:</td><td> Lembur</td></tr>
+								<tr><td> S </td><td>:</td><td> Sakit</td></tr>
+								<tr><td class="text-red" colspan="3">*hari libur</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="box-footer" id="absen_perkaryawan" style="display:{absen_perkaryawan}">
+			
+			<div class="col-md-12"> 
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover text-center">
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>Tanggal</th>
+								<th>Absensi</th>
+								<th>Masuk</th>
+								<th>Pulang</th>
+								<th>Mulai Lembur</th>
+								<th>Selesai Lembur</th>
+								<th>Keterangan</th>
+								<!-- <th class="text-center">Aksi</th> -->
+							</tr>
+						</thead>
+						<tbody>
+	{periode_absensi}					
+							<tr style="background:{bg_color}; color : {color}">
+								<td >{nomor}</td>
+								<td>{absensi_tanggal}</td>
+								<td>{absensi}</td>
+								<td>{jam_masuk}</td>
+								<td>{jam_keluar}</td>
+								<td>{mulai_lembur}</td>
+								<td>{selesai_lembur}</td>
+								<td>{keterangan}</td>
+								<!-- <td>{keterangan}</td> -->
+								
+								
+							</tr>	
+	{/periode_absensi}					
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+      </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+  
+<script>
+	$('#rangeabsen').daterangepicker({ 
+		"locale": {
+			"format": "DD-MM-YYYY",
+			"separator": " - ",
+		}}
+	);
+</script>

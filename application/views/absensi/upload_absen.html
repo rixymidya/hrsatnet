@@ -1,0 +1,86 @@
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    {breadcrum}
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+      <div class="col-md-12">
+		<div class="box">
+				<div class="box-header">
+				  <h3 class="box-title">Upload Attendance</h3> 
+				</div>
+				<!-- /.box-header --> 
+				<div class="box-body no-padding text-center"> 
+					<div class="col-md-6">  
+						<div class="form-group">
+						<!-- <label> Department </label> -->
+						  <button class="btn btn-primary btn-block" onclick="window.location='{base}/aset/download/attendance.xls'">
+							<i class="fa fa-download"></i> Download Template Attendance
+						  </button>
+						</div>
+						
+					</div>
+					<div class="col-md-6">			
+				
+						<div class="form-group">  
+							<button class="btn btn-warning btn-block" id="cari_periode" data-toggle="modal" data-target="#myModal"> 
+								<i class="fa fa-upload"></i> Upload Data Attendance
+							</button>
+							
+							<!-- Modal -->
+							<div id="myModal" class="modal fade" role="dialog">
+							  <div class="modal-dialog"> 
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Upload Attendance</h4>
+								  </div>
+								  <div class="modal-body">
+										<form method="POST" action="" enctype="multipart/form-data">
+											<div class="form-group">
+											  <input type="file" name="absensi" id="absensi" class="form-control" accept="text/csv" />
+											</div>
+											<button class="btn btn-success" name="submit" type="submit">
+												<i class="fa fa-save"></i> Upload
+											</button>
+										</form>
+								  </div>
+								  <div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								  </div>
+								</div>
+
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box-footer">
+					
+					<style>
+					</style>
+					<div class="col-md-4 text-left">
+						<table class="table">
+							<thead><tr> <th colspan="3">Tutorial Upload : </th></tr></thead>
+							<tbody class="ket">
+								<tr><td> 1. </td><td> Download terlebih dahulu template attendance</td></tr>
+								<tr><td> 2. </td><td> Isi data ke template yang sudah didownload</td></tr>
+								<tr><td> 3. </td><td> Klik tombol upload yang berda di sebelah kanan</td></tr>
+								<tr><td> 4. </td><td> Pilih file yang akan diupload</td></tr>
+								<tr><td> 5. </td><td> Selesai.</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+		</div>
+      </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  

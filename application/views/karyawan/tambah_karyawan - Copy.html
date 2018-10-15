@@ -1,0 +1,362 @@
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    {breadcrum}
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+	  <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tambah Karyawan</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" method="POST" action="">
+				<style>
+					.form_tambah_karyawan > div > div.box-body {
+						background : #fff;
+					}
+				</style>
+              <div class="row form_tambah_karyawan">
+				  <div class="col-md-6">
+					  <div class="box-body">
+						<div class="form-group">
+						  <label>Foto Karyawan</label>
+								<div id="upload-foto"></div>
+								<div class="input-group input-group-md">
+									<input class="form-control" type="file" id="upload" value="Choose a file" accept="image/*" />
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-success btn-md" id="crop"> Crop </button>
+										</span>
+								</div> 
+								<input type="hidden" id="imagebase64" name="imagebase64">
+								<input type="hidden" id="value_foto" name="value_foto">
+						</div> 
+						<div class="form-group">
+							<div id="hasilcrop"></div>
+							<!-- <img style="width:200px;height:200px;" class="profile-user-img img-responsive img-circle" src="{base}/aset/images/foto_karyawan/{foto}" alt="User profile picture"> -->
+							<button type="button" id="gantifoto" class="btn btn-primary btn-block btn-sm">Ganti Foto</button>
+						</div> 
+						<div class="form-group">
+						  <label>Nomor Induk Karyawan</label>
+						  <input class="form-control" name="karyawan_nik" placeholder="Nomor Induk Karyawan" type="text" required="required" />
+						</div> 
+						<div class="form-group">
+						  <label>Nama</label>
+						  <input class="form-control" name="karyawan_nama" placeholder="Nama Karyawan" type="text" required="required" />
+						</div>
+						<div class="form-group">
+						  <label>No. KTP</label>
+						  <input class="form-control" name="ktp" placeholder="Nomor Induk Kependudukan" type="text" required="required" />
+						</div>
+						<div class="form-group">
+						  <label>Masa Berlaku KTP</label>
+							<div class="input-group date">
+							  <div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+							  </div>
+								<input class="form-control ambiltanggal" name="ktp_mati" placeholder="Masa Berlaku KTP" type="text" required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+						  <label>Jenis Kelamin</label>
+						  <select name="jk" class="form-control" required="required">
+							<option value="">Pilih Jenis Kelamin</option>
+							<option value="1">Laki - Laki</option>
+							<option value="2">Perempuan</option>
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Tempat Lahir</label>
+						  <input class="form-control" name="tempat_lahir" placeholder="Tempat Lahir Karyawan" type="text" required="required" />
+						</div> 
+						<div class="form-group">
+						  <label>Tanggal Lahir</label>
+						  <!-- <input class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir Karyawan" type="text"> -->
+							<div class="input-group date">
+							  <div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+							  </div>
+							  <input type="text" name="tanggal_lahir" placeholder="Tanggal Lahir Karyawan" class="form-control pull-right ambiltanggal" required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+						  <label>Alamat Sesuai KTP</label>
+						  <textarea class="form-control" name="alamat_ktp" placeholder="Alamat Sesuai KTP" required="required"></textarea>
+						</div>
+						<div class="form-group">
+						  <label>Alamat Tinggal</label>
+						  <textarea class="form-control" name="alamat_tinggal" placeholder="Alamat Tempat Tinggal Sekarang"></textarea>
+						</div> 
+						<div class="form-group">
+						  <label>Tanggal Bergabung</label>
+						  <input class="form-control" name="tanggal_diterima" placeholder="Tanggal Menjadi Karyawan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Dept. / Project</label>
+						  <input class="form-control" name="dept_project" placeholder="Department / Project" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Lokasi</label>
+						  <input class="form-control" name="penempatan" placeholder="Lokasi Penempatan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Status Karyawan</label>
+						  <select name="status" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">Permanent</option>
+							<option value="2">Kontrak</option>
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Jabatan</label>
+						  <input class="form-control" name="jabatan" placeholder="Jabatan Karyawan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Agama</label>
+						  <select name="agama" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">Islam</option>
+							<option value="2">Kristen</option>
+							<option value="3">Katholik</option>
+							<option value="4">Hindu</option>
+							<option value="5">Budha</option>
+							<option value="6">Kong Hu Cu</option>
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Suku</label>
+						  <input class="form-control" name="suku" placeholder="Suku Bangsa" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Gol. Darah</label>
+						  <select name="darah" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">A</option>
+							<option value="2">B</option>
+							<option value="3">AB</option>
+							<option value="4">O</option> 
+						  </select>
+						</div>
+
+						<div class="form-group">
+						  <label>Pendidikan Terakhir</label>
+						  <select name="pendidikan" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">Tidak Sekolah</option>
+							<option value="2">SD Sederajat</option> 
+							<option value="3">SLTP Sederajat</option> 
+							<option value="4">SLTA / SMK Sederajat</option> 
+							<option value="5">Diploma I</option> 
+							<option value="6">Diploma II</option> 
+							<option value="7">Diploma III</option> 
+							<option value="8">Diploma IV / Sarjana</option> 
+							<option value="9">Magister / Master</option> 
+							<option value="10">Doktor</option> 
+						  </select>
+						</div>
+					  </div> 
+				  </div> 
+				  <div class="col-md-6">
+					  <div class="box-body">
+						<div class="form-group">
+						  <label>Status Pernikahan</label>
+						  <select name="menikah" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">Belum Menikah</option>
+							<option value="2">Menikah</option>
+							<option value="3">Pernah Menikah</option>
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Nama Pasangan</label>
+						  <input class="form-control" name="nama_pasangan" placeholder="Nama Suami / Istri" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Jumlah Anak</label>
+						  <input class="form-control" name="anak" placeholder="Jumlah Anak" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Nama Anak 1</label>
+						  <input class="form-control" name="anak_1" placeholder="Nama Anak Pertama" type="text">
+						</div> 
+						<div class="form-group">
+						  <label>Nama Anak 2</label>
+						  <input class="form-control" name="anak_2" placeholder="Nama Anak Kedua" type="text">
+						</div> 
+						<div class="form-group">
+						  <label>Nama Anak 3</label>
+						  <input class="form-control" name="anak_3" placeholder="Nama Anak Ketiga" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Nomor Darurat</label>
+						  <input class="form-control" name="no_darurat" placeholder="Nomor Darurat" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Pemilik Nomor Darurat</label>
+						  <input class="form-control" name="pemilik_no_darurat" placeholder="Pemilik Nomor Darurat" type="text">
+						</div> 
+						<div class="form-group">
+						  <label>Asal Pendidikan Terakhir</label>
+						  <input class="form-control" name="lulusan" placeholder="Lulusan Dari" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Tahun Lulus</label>
+						  <input class="form-control" name="tahun_lulus" placeholder="Tahun Kelulusan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Jurusan Pendidikan</label>
+						  <input class="form-control" name="jurusan_pendidikan" placeholder="Jurusan Pendidikan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>No. Handphone</label>
+						  <input class="form-control" name="hp" placeholder="Nomor Handphone" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Email</label>
+						  <input class="form-control" name="email" placeholder="Email SatNetCom jika ada" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Telepon Rumah</label>
+						  <input class="form-control" name="telp" placeholder="Nomor Telepon Rumah" type="text">
+						</div>
+						<div class="form-group">
+						  <label>BPJS Ketenagakerjaan</label>
+						  <input class="form-control" name="bpjs_tk" placeholder="Nomor BPJS Ketenagakerjaan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>BPJS Kesehatan</label>
+						  <input class="form-control" name="bpjs_kesehatan" placeholder="Nomor BPJS Kesehatan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>NPWP</label>
+						  <input class="form-control" name="npwp" placeholder="Nomor NPWP" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Status Pajak</label>
+						  <select name="pendidikan" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">TK</option>
+							<option value="2">K0</option> 
+							<option value="3">K1</option> 
+							<option value="4">K2</option> 
+							<option value="5">K3</option> 
+							<option value="6">T1</option> 
+							<option value="7">T2</option> 
+							<option value="8">T3</option>  
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Keterangan</label>
+						  <textarea class="form-control" name="keterangan" placeholder="Keterangan" type="text"></textarea>
+						</div>
+					  </div> 
+				  </div> 
+              </div>
+
+			  <div class="col-md-12">
+				  <div class="box-footer">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				  </div>
+			  </div>
+            </form>
+          </div>
+          <!-- /.box -->
+
+
+        </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+  
+<link rel="stylesheet" href="{base}/aset/css/croppie.css" />
+<script src="{base}/aset/js/croppie.js"></script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$('#hasilcrop').hide();
+	$('#gantifoto').hide();
+
+	$('img.cr-image').attr('src', '{base}/aset/images/foto_karyawan/rix.jpg');
+	//console.log ($('#upload').val());
+    var $uploadCrop;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();          
+            reader.onload = function (e) {
+                $uploadCrop.croppie('bind', {
+                    url: e.target.result
+                });
+                $('.upload-foto').addClass('ready');
+            }           
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $uploadCrop = $('#upload-foto').croppie({
+        viewport: {
+            width: 100,
+            height: 150
+        },
+        boundary: {
+            width: 200,
+            height: 200
+        }
+    });
+
+    $('#upload').on('change', function () { readFile(this); });
+    $('.upload-result').on('click', function (ev) {
+        $uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'original'
+        }).then(function (resp) {
+            $('#imagebase64').val(resp);
+            //$('#form').submit();
+        });
+    });
+	
+	$('#crop').on('click', function(){
+		$uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'original'
+        }).then(function (resp) {itv3d
+			$('#upload-foto').hide();
+			$('#upload').hide();
+			$('#crop').hide();
+			$('#hasilcrop').show();
+			$('#gantifoto').show();
+            var cropnya = $('#imagebase64').val(resp);
+			$('#hasilcrop').html('<img src ='+cropnya.val()+'  class="profile-user-img img-responsive" style="height:auto;" />');
+			var apaini = $('#value_foto').val(cropnya.val());
+			console.log(apaini);
+        });
+	});
+	
+	$('#gantifoto').on('click', function(){
+			$('#upload-foto').show();
+			$('#upload').show();
+			$('#crop').show();
+			$('#hasilcrop').hide();
+			$('#gantifoto').hide();
+	});
+});
+</script>
+  
+<link rel="stylesheet" href="{base}/aset/bower_components/AdminLTE/plugins/datepicker/datepicker3.css">
+<script src="{base}/aset/bower_components/AdminLTE/plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script>
+  //Date picker
+    $('.ambiltanggal').datepicker({
+		autoclose: true,
+		format: 'yyyy-mm-dd',
+    });
+  </script>

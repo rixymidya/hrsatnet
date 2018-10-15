@@ -1,0 +1,119 @@
+<section class="content">
+      <div class="row">
+	
+            <div class="box box-corn">
+				<div class="box-header bg-corn with-border">
+				<h3 class="box-title" style="text-align:center; width:100%;">
+					<div class="pull-left"> 
+						 <div class="arrow_back"> 
+							 <a href="{base}">
+								<i class="fa fa-chevron-left"></i> Kembali 
+							</a>
+						</div>
+					</div> Detail Produk </h3>
+				</div>
+	{detail_produk}
+				<div class="box-body"> 
+					<div class="row">
+						<div class="col-md-12">
+							<div class="box box-corn">  
+								<div class="box-body"> 
+									<div class="col-md-6">
+									  <img class=" img-responsive" src="{base}/aset/images/produk/{produk_foto}" alt="{produk_nama}" width="100%">
+									</div>
+									<div class="col-md-6 detil_fitur">
+										<div class="box box-default">
+											<div class="box-header bg-cordn with-border">
+											<h2 class="box-h2">
+												{produk_nama}
+											</h2>
+											</div>
+											<div class="box-body">
+												<h3 class="box-title box-h3">Fitur : </h3>
+												<p>{produk_deskripsi}</p>
+											</div> 
+											<div class="box-footer">
+												<span class="labelkategori"><label>Category</label>  : {jenis} </span>
+											</div>
+										</div>
+										<div class="paneel paneel-primary">
+											<div class="panel-heading">
+												<button onclick="window.location='{home}'" class="btn btn-primary btn-block">
+													<i class="fa fa-home"></i> Back to Home 
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div> 
+				</div>
+				
+	{/detail_produk}
+	
+				<div class="box-footer">
+					
+				<div class="col-md-12">
+			<div class="box box-corn"> 
+				<div class="box-header with-border">
+					<h3 class="box-title">
+						<b>Produk Lainnya</b>
+					</h3>
+				</div>
+				<div class="box-body">
+				 <div class="box-body no-padding">
+					
+				<div class="box-body">
+					<div class="container-fluid collection">
+						<div class="row">
+							{produk_lain}
+								<div class="col-md-3 col-xs-6">
+									<div class="produk">
+										<a href="{base}/produk/detail/{produk_id}">
+										<img src="{base}/aset/images/produk/{produk_foto}" width="100%"> 
+										<div class="opsi-produk">
+											<span class="nama-produk">
+												<span class="nama-produk"> {produk_nama} </span> 
+											</span>
+										</div>
+										</a>
+									</div>
+								</div>
+							{/produk_lain}
+						</div>
+					</div>
+				</div>
+					  <!-- <table class="table table-condensed"> -->
+						<!-- <tbody><tr>  -->
+							<!-- <th>Keterangan</th> -->
+							<!-- <th>Spesifikasi</th>  -->
+							<!-- </tr> -->
+							<!-- <tr> -->
+							  <!-- <th>Resolusi</th>  -->
+							  <!-- <td>Lens</td>  -->
+							<!-- </tr> -->
+							<!-- <tr>  -->
+							  <!-- <td>Color</td> -->
+							  <!-- <td> Putih </td>  -->
+							<!-- </tr> -->
+							<!-- <tr> -->
+							  <!-- <td> 2 Megapixel 1080p </td>  -->
+							  <!-- <td> 3.6mm fixed lens 6mm optional</td>  -->
+							<!-- </tr> -->
+						<!-- </tbody> -->
+					  <!-- </table> -->
+            </div> 
+				</div>
+            </div> 
+            </div> 
+				</div>
+		</div>
+			</div>
+			
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+    </section>

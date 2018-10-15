@@ -1,0 +1,114 @@
+      <section class="content-header">
+        <button class="btn btn-info" data-toggle="modal" data-target="#addproduk"><i class="fa fa-plus"></i> Tambah Produk</button>
+      </section>
+
+      <section class="content">
+        <div class="box box-corn">
+          <div class="box-header bg-corn">
+            <h3 class="box-title">All Produk</h3>
+          </div>
+          <div class="box-body">
+			  <div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>Nama Produk</th>
+								<th>Nama Produk</th>
+								<th>Stok</th>
+								<th>Kategori</th>
+								<th>Jenis</th>
+							</tr>
+						</thead>
+						<tbody>
+						{all_produk}
+							<tr valign="top">
+								<td>{nomor}</td>
+								<td>{produk_nama}</td>
+								<td><img onclick="data-toggle='modal';data-target='#addproduk';"src="{base}/aset/images/produk/{produk_foto}"  height="50px" /></td>
+								<td>{produk_stok}</td>
+								<td>{kategori}</td>
+								<td>{jenis}</td>
+							</tr>
+						{/all_produk}
+						</tbody>
+					</table>
+			  </div>
+          </div>
+        </div>
+      </section>
+	  
+	    
+  	
+<!-- Modal -->
+<div class="modal fade" id="addproduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+          <!-- general form elements -->
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tambah Produk</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="" method="POST" enctype="multipart/form-data">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Produk</label>
+                  <input type="text" class="form-control" name="produk_nama" placeholder="Nama Produk">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Stok</label>
+                  <input type="number" class="form-control" value="10" name="produk_stok" placeholder="Stok">
+                </div>
+                <div class="form-group">
+                  <label>Kategori</label>
+				  <select name="produk_kategori" class="form-control">
+					<option value="1">Outdoor</option>
+					<option value="2">Indoor</option>
+					<option value="3">Aksesoris</option>
+				  </select>
+                </div>
+                <div class="form-group">
+                  <label>Jenis</label>
+				  <select name="produk_jenis" class="form-control">
+					<option value="1">Analog</option>
+					<option value="2">HD</option>
+					<option value="3">Analog HD</option>
+					<option value="4">IP Cam</option>
+				  </select>
+                </div>
+                <div class="form-group">
+                  <label for="foto">Foto</label>
+                  <input type="file" name="foto">
+
+                  <!-- <p class="help-block">Example block-level help text here.</p> -->
+                </div>
+                <div class="form-group">
+                  <label for="foto">Deskripsi</label>
+                  <textarea class="form-control" name="produk_deskripsi"></textarea>
+
+                  <!-- <p class="help-block">Example block-level help text here.</p> -->
+                </div>
+                <div class="form-group">
+                  <label>Keyword</label>
+                  <textarea class="form-control" name="produk_keyword">cctv, balikpapan, cctv balikpapan,  </textarea>
+
+                  <!-- <p class="help-block">Example block-level help text here.</p> -->
+                </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+				  <div class="text-center">
+							<button type="submit" class="btn btn-primary btn-sm">Submit</button>
+							<button type="submit" class="btn btn-secondary text-center btn-sm" data-dismiss="modal">Cancel</button>
+				  </div>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+			
+    </div>
+  </div>
+</div>

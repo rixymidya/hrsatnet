@@ -1,0 +1,77 @@
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="{base}" class="navbar-brand">
+		    <h1 class="namaweb">
+				{nama_app}
+			</h1>
+		  </a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        
+        <div class="navbar-custom-menu btn-chat" style="margin-right: 16px;">
+            <!-- Messages: style can be found in dropdown.less-->
+			<span>{user_info}{user_namalengkap}{/user_info}
+			<button class="btn btn-sm btn-block" onclick="window.location.href='{base}/logout';">
+                <i class="fa fa-unlock"></i> 
+				<span class="text">Logout</span>
+			</button>
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  
+  	
+<!-- Modal -->
+<div class="modal fade" id="btnChat" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="border: 3px solid cornflowerblue;border-radius: 2px;">
+    <div class="modal-content">
+      <div class="modal-header text-center text-bold text-aqua">
+        <h2 class="modal-title" id="exampleModalLongTitle"> <i class="fa fa-comments"></i>  Live Chat</h2>
+      </div>
+      <div class="modal-body">
+			<div class="container-fluid">
+				<div class="btncs">
+					<button class="btn btn-sm btn-danger" onclick="window.open('https://api.whatsapp.com/send?phone=6285959004948&text=Hi%20CS1,%20Saya%20dapat%20informasi%20dari%20Website%20sisesa.co.id')">
+						<i class="fa fa-whatsapp"></i> 
+						<span class="text">CS 1</span>
+					</button>
+				</div>
+				<div class="btncs">
+					<button class="btn btn-sm btn-warning" onclick="window.open('https://api.whatsapp.com/send?phone=6281523808396&text=Hi%20CS2,%20Saya%20dapat%20informasi%20dari%20Website%20sisesa.co.id')">
+						<i class="fa fa-whatsapp"></i> 
+						<span class="text">CS 2</span>
+					</button>
+				</div>
+				<div class="btncs">
+					<button class="btn btn-sm btn-info" onclick="window.open('https://api.whatsapp.com/send?phone=6282299332741&text=Hi%20CS3,%20Saya%20dapat%20informasi%20dari%20Website%20sisesa.co.id')">
+						<i class="fa fa-whatsapp"></i> 
+						<span class="text">CS 3</span>
+					</button>
+				</div>
+				<div class="btncs">
+					<button class="btn btn-sm btn-primary" onclick="window.open('https://api.whatsapp.com/send?phone=6282299448525&text=Hi%20CS4,%20Saya%20dapat%20informasi%20dari%20Website%20sisesa.co.id')">
+						<i class="fa fa-whatsapp"></i> 
+						<span class="text">CS 4</span>
+					</button>
+				</div>
+				<div class="btncs">
+					<button class="btn btn-sm bg-blue" onclick="window.open('https://api.whatsapp.com/send?phone=6287771766764&text=Hi%20CS5,%20Saya%20dapat%20informasi%20dari%20Website%20sisesa.co.id')">
+						<i class="fa fa-whatsapp"></i> 
+						<span class="text">CS 5</span>
+					</button>
+				</div>
+			</div>
+	  </div>
+      <div class="text-center" style="padding:15px;">
+        <button type="button" class="btn btn-secondary text-center btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

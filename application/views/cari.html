@@ -1,0 +1,112 @@
+      <section class="content-header text-center" style="padding: 0;">
+        <h1>
+          <!-- <img class="brand" src="{base}/aset/images/logo-sisesa.jpg" alt="Logo Si.Se.Sa"> -->
+          <!-- <img class="brand" src="{base}/aset/images/slide_1.png" alt="Logo Si.Se.Sa"> -->
+          <!-- <small>Select Your Tour</small> -->
+        </h1>
+      </section>
+
+	<!-- Main content -->
+	<section class="content katalog text-center">
+		<div class="box box-danger">
+				<div class="box-header bg-red">
+					<h3 class="box-title"><i class="fa fa-envelope"></i> Hasil Pencarian </h3>
+				</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel box-solid box-success">
+								<div class="panel-heading">
+									<h3>Found : <span class="text-bold">{count_found} </span>Peserta</h3>
+								</div>	
+							</div>	
+							
+							
+							<!-- <div class="col-md-4"> -->
+								<!-- <div class="box box-solifdd box-success"> -->
+									<!-- <div class="box-header"> -->
+										<!-- <h3 class="box-title">VVIP : {vvip}</h3> -->
+									<!-- </div>	 -->
+								<!-- </div>	 -->
+							<!-- </div>	 -->
+							
+							<!-- <div class="col-md-4"> -->
+								<!-- <div class="box box-solifdd box-info"> -->
+									<!-- <div class="box-header"> -->
+										<!-- <h3 class="box-title">VIP : {vip}</h3> -->
+									<!-- </div>	 -->
+								<!-- </div>	 -->
+							<!-- </div>	 -->
+							
+							<!-- <div class="col-md-4"> -->
+								<!-- <div class="box box-solifdd box-warning"> -->
+									<!-- <div class="box-header"> -->
+										<!-- <h3 class="box-title">Reguler : {reg}</h3> -->
+									<!-- </div>	 -->
+								<!-- </div>	 -->
+							<!-- </div>	 -->
+						</div>	
+						
+					</div>
+				<div class="box-header with-border text-left">
+					<div class="row">
+							<!-- <form action="" method="get" class="form-horizontal"> -->
+						<div class="col-md-12">
+							<form action="" method="GET">
+							<div class="input-group">
+								<div class="gabung">
+									<input style="width: 76%;" type="text" value="{get_value}" name="undangan_nama" class="form-control" placeholder="Cari Nama ...">
+									  <select style="width: 20%;" name="undangan_kategori" class="text-center form-control">
+										<option value="all">Semua Kategori</option>
+										<option value="1">V.V.I.P</option>
+										<option value="2">V.I.P</option>
+										<option value="3">Reguler</option>
+									  </select>
+								</div>
+								  <span class="input-group-btn">
+									<button type="submit" class="btn btn-flat"><i class="fa fa-search"></i> Cari
+									</button>
+								  </span>
+							</div>
+							</form>
+						</div>
+						  <!-- </form> -->
+					</div>
+				</div>
+				<div class="box-body">
+					<div class="container-fluid collection">
+						<div class="row">
+							{all_cari}
+							<div class="col-md-2 col-sm-3 col-xs-4" style="min-height:300px">
+								<img style="border: 4px solid {kat_warna};border-radius: 4px;" src="{base}/aset/images/foto/{undangan_foto}" width="100%">
+								<!-- <img src="{foto}" width="100%"> -->
+								<div class="info-undangan">
+									<span class="nama-undangan"> {undangan_nama} </span>
+								</div>
+								<div class=""  style="padding: 1%;background: ghostwhite;">
+									<span class="nama-undangan"> 
+										<a href="https://www.instagram.com/{undangan_ig}" target="_blank">@{undangan_ig} </a>
+									</span>
+								</div>
+								<div class=""  style="padding: 1%;background: ghostwhite;">
+									<span class="nama-undangan"> 
+										<!-- <button title="Lihat Selengkapnya" onclick="window.location.href='{base}/invitation/token/{token}'" class="btn btn-info btn-sm">Invitation</button> -->
+										<button title="Lihat Selengkapnya" onclick="window.open('{base}/invitation/token/{token}','_blank')" class="btn btn-info btn-sm">Invitation</button>
+									</span>
+								</div>
+								<div class="opsi-undangan">
+									<span class="nama-undangan">
+											<button title="Lihat Selengkapnya" onclick="window.location.href='{base}/undangan/detail/{undangan_id}'" class="btn btn-warning btn-sm"><i class="fa fa-search"></i></button>
+											<button title="edit" onclick="window.location.href='{base}/undangan/edit/{undangan_id}'" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></button>
+											<button title="Hapus" onclick="window.location.href='{base}/undangan/delete/{undangan_id}'" class="btn btn-danger btn-sm"><i class="fa fa-times"></i></button>
+									</span>
+								</div>
+							</div>
+							{/all_cari}
+						</div>
+					</div>
+				</div>
+				<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+		</div>
+	</section>
+	  
+	

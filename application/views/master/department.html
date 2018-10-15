@@ -1,0 +1,62 @@
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    {breadcrum}
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+      <div class="col-md-12">
+		<div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Semua {function}</h3>
+			  <button class="btn btn-primary btn-sm pull-right" onclick="window.location='{base}/{class}/add'"><i class="fa fa-plus"></i> Tambah {function}</button>
+
+              <!-- <div class="box-tools"> -->
+                <!-- <ul class="pagination pagination-sm no-margin pull-right"> -->
+                  <!-- <li><a href="#">«</a></li> -->
+                  <!-- <li><a href="#">1</a></li> -->
+                  <!-- <li><a href="#">2</a></li> -->
+                  <!-- <li><a href="#">3</a></li> -->
+                  <!-- <li><a href="#">»</a></li> -->
+                <!-- </ul> -->
+              <!-- </div> -->
+            </div>
+            <!-- /.box-header -->
+			<style>
+				.ketengah > th {
+					text-align : center;
+				}
+				.table-bordered-bottom > tbody > tr:hover{ 
+					background : lightblue;
+				}
+			</style>
+            <div class="box-body no-padding"> 
+              <table class="table table-bordered table-bordered-bottom">
+                <thead>
+				<tr class="ketengah bg-primary">
+                  <th>#</th>
+                  <th>Nama {function}</th> 
+                  <th>Action</th> 
+                </tr>
+				</thead>
+				<tbody>
+				{all_department}
+                <tr>
+                  <td class="text-center">{nomor}</td>
+                  <td>{department_nama}</td>
+                  <td class="text-center"><button class="btn btn-success btn-xs" onclick="window.location='{base}/karyawan/detail/{karyawan_id}'"> Detail </button></td>
+                </tr>
+				{/all_department}
+              </tbody></table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

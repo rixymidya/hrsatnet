@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="{deskripsi}" />
+<meta name="keywords" content="{keyword}">
+
+<meta name="author" content="Rixy Midya">
+  <title>{title_app}</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="{base}/aset/images/icon.png" type="image/x-icon">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="{base}/aset/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="{base}/aset/bower_components/AdminLTE/plugins/select2/select2.min.css"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{base}/aset/css/blossomfeaturebox.css">
+  <link rel="stylesheet" href="{base}/aset/css/optincontent.css">
+  <link rel="stylesheet" href="{base}/aset/css/AdminLTE.css">
+  <link rel="stylesheet" href="{base}/aset/css/skin-custom.css">
+  <link rel="stylesheet" href="{base}/aset/css/pretest.css">
+  <link rel="stylesheet" href="{base}/aset/css/incctv.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  
+<link rel="stylesheet" href="{base}/aset/css/subscribe.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125801046-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125801046-1');
+</script>
+<meta name="google-site-verification" content="6E-JQXOATykL_YNHz2kxn8nEn8GR7MH6UtMVRlSBW4I" />
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-custom layout-top-nav">
+	  
+	  
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="wrapper">
+	{header}
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+    <div class="container">
+		{body}
+    </div>
+  </div>
+	{footer}
+</div>
+	  
+<!-- mPopup box -->
+
+<!---div id="mpopupBox" class="modal"> 
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close btntutup" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color:red">×</span></button>
+                <h3 class="modal-title">Join Newsletter</h3>
+              </div>
+              <div class="modal-body">
+					<p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+					<form action="{base}/main/subscribe" target="_blank" method="post" accept-charset="UTF-8">
+						<div class="input-group">
+							<input name="subscriber_email" placeholder="email.anda@gmail.com" class="form-control" type="email">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="submit" onclick="window.location.reload()" id="btnsubscribe">Subscribe</button>
+								<button class="btn btn-warning btntutup" type="button">Close</button>
+								
+							</span>
+						</div>
+					</form>
+              </div>
+            </div> 
+          </div> 
+	
+</div---->
+
+<!-- ./wrapper -->
+
+<!-- jQuery 3.1.1 -->
+<script src="{base}/aset/bower_components/AdminLTE/plugins/jQuery/jquery-3.1.1.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{base}/aset/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+<script src="{base}/aset/bower_components/AdminLTE/plugins/select2/select2.full.min.js"></script>
+<!-- SlimScroll -->
+<script src="{base}/aset/bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="{base}/aset/bower_components/AdminLTE/plugins/fastclick/fastclick.js"></script>
+<script src="{base}/aset/js/blossomfeaturebox.js"></script>
+<script src="{base}/aset/bower_components/AdminLTE/dist/js/demo.js"></script>
+<script>
+
+<!-- jQuery(function($){  -->
+
+	<!-- blossomfeaturebox.init({ -->
+		<!-- optinfile: '{base}/aset/optincontent.txtx', // #id of feature box markup on page or path to .txt file with markup -->
+		<!-- fxeffect: 'swing', -->
+		<!-- displaytype: '20%', // 'integer%" OR 'integer PLUS 's' OR "always" -->
+		<!-- displayfreq: {duration: 'always', cookiename: 'featurebox'} -->
+	<!-- }) -->
+
+<!-- }) -->
+
+</script>
+<script src="{base}/aset/js/jquery.cookie.js"></script>
+<script>
+function subscriptionPopup(){
+    // get the mPopup
+    var mpopup = $('#mpopupBox');
+    
+    // open the mPopup
+    mpopup.show();
+    
+    // close the mPopup once close element is clicked
+    $(".btntutup").on('click',function(){
+        mpopup.hide();
+    });
+    
+    // close the mPopup when user clicks outside of the box
+    $(window).on('click', function(e) {
+        if(e.target == mpopup[0]){
+            mpopup.hide();
+        }
+    });
+}
+
+$(document).ready(function() {
+    var popDisplayed = $.cookie('popDisplayed');
+    if(popDisplayed == '1'){
+        return false;
+    }else{
+        setTimeout( function() {
+            subscriptionPopup();
+        },3000);
+        $.cookie('popDisplayed', '1', { expires: 3 });
+    }
+});
+</script>
+<script>
+	$('#btnsubscribe').click;
+</script>
+</body>
+</html>

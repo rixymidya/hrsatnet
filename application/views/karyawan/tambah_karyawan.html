@@ -1,0 +1,310 @@
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    {breadcrum}
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+	  <div class="col-md-12" id="data-karyawan">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tambah Data Karyawan</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" method="POST" action="">
+				<style>
+					.form_tambah_karyawan > div > div.box-body {
+						background : #fff;
+					}
+				</style>
+              <div class="row form_tambah_karyawan">
+				  <div class="col-md-6">
+					  <div class="box-body">  
+						<div class="form-group">
+						  <label>Nomor Induk Karyawan</label>
+						  <input class="form-control" name="karyawan_nik" placeholder="Nomor Induk Karyawan" type="text" required="required" />
+						</div>  
+						<div class="form-group">
+						  <label>Tanggal Bergabung</label>
+						  <input class="form-control" name="tanggal_diterima" placeholder="Tanggal Menjadi Karyawan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Departament</label>
+						  <input class="form-control" name="department_id" placeholder="Department" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Jabatan</label>
+						  <input class="form-control" name="jabatan_id" placeholder="Jabatan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Divisi</label>
+						  <input class="form-control" name="divisi_id" placeholder="Divisi" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Project</label>
+						  <input class="form-control" name="dept_project" placeholder="Department / Project" type="text">
+						</div>
+					</div>
+				  </div>
+				  <div class="col-md-6">
+					  <div class="box-body">
+						<div class="form-group">
+						  <label>Kantor Penempatan</label>
+						  <input class="form-control" name="penempatan" placeholder="Lokasi Penempatan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Status Karyawan</label>
+						  <select name="status" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">Permanent</option>
+							<option value="2">Kontrak</option>
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Jabatan</label>
+						  <input class="form-control" name="jabatan" placeholder="Jabatan Karyawan" type="text">
+						</div>  
+						<div class="form-group">
+						  <label>Rekening BCA</label>
+						  <input class="form-control" name="rekening_bca" placeholder="No Rekening" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Status Pajak</label>
+						  <select name="pendidikan" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">TK</option>
+							<option value="2">K0</option> 
+							<option value="3">K1</option> 
+							<option value="4">K2</option> 
+							<option value="5">K3</option> 
+							<option value="6">T1</option> 
+							<option value="7">T2</option> 
+							<option value="8">T3</option>  
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Keterangan</label>
+						  <textarea class="form-control" name="keterangan" placeholder="Keterangan" type="text"></textarea>
+						</div>
+					  </div> 
+				  </div> 
+              </div>
+
+			  <div class="col-md-12">
+				  <div class="box-footer">
+				  </div>
+			  </div>
+             
+          </div>
+          <!-- /.box -->
+
+
+        </div>
+	  <div class="col-md-12" id="data-personal">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tambah Data Personal</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+             
+				<style>
+					.form_tambah_karyawan > div > div.box-body {
+						background : #fff;
+					}
+				</style>
+              <div class="row form_tambah_karyawan">
+				  <div class="col-md-6">
+					  <div class="box-body">  
+						<div class="form-group">
+						  <label>Nomor Induk Karyawan</label>
+						  <input class="form-control" name="karyawan_nik" placeholder="Nomor Induk Karyawan" type="text" required="required" />
+						</div>  
+						<div class="form-group">
+						  <label>Tanggal Bergabung</label>
+						  <input class="form-control" name="tanggal_diterima" placeholder="Tanggal Menjadi Karyawan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Departament</label>
+						  <input class="form-control" name="department_id" placeholder="Department" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Jabatan</label>
+						  <input class="form-control" name="jabatan_id" placeholder="Jabatan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Divisi</label>
+						  <input class="form-control" name="divisi_id" placeholder="Divisi" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Project</label>
+						  <input class="form-control" name="dept_project" placeholder="Department / Project" type="text">
+						</div>
+					</div>
+				  </div>
+				  <div class="col-md-6">
+					  <div class="box-body">
+						<div class="form-group">
+						  <label>Kantor Penempatan</label>
+						  <input class="form-control" name="penempatan" placeholder="Lokasi Penempatan" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Status Karyawan</label>
+						  <select name="status" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">Permanent</option>
+							<option value="2">Kontrak</option>
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Jabatan</label>
+						  <input class="form-control" name="jabatan" placeholder="Jabatan Karyawan" type="text">
+						</div>  
+						<div class="form-group">
+						  <label>Rekening BCA</label>
+						  <input class="form-control" name="rekening_bca" placeholder="No Rekening" type="text">
+						</div>
+						<div class="form-group">
+						  <label>Status Pajak</label>
+						  <select name="pendidikan" class="form-control">
+							<option value="">-- Pilih --</option>
+							<option value="1">TK</option>
+							<option value="2">K0</option> 
+							<option value="3">K1</option> 
+							<option value="4">K2</option> 
+							<option value="5">K3</option> 
+							<option value="6">T1</option> 
+							<option value="7">T2</option> 
+							<option value="8">T3</option>  
+						  </select>
+						</div>
+						<div class="form-group">
+						  <label>Keterangan</label>
+						  <textarea class="form-control" name="keterangan" placeholder="Keterangan" type="text"></textarea>
+						</div>
+					  </div> 
+				  </div> 
+              </div>
+
+			  <div class="col-md-12">
+				  <div class="box-footer">
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<button id="next-btn" class="btn btn-primary">Next</button>
+				  </div>
+			  </div>
+            </form>
+          </div>
+          <!-- /.box -->
+
+
+        </div>
+			  <div class="col-md-12">
+				  <div class="box-footer">
+					<button id="next-btn" class="btn btn-primary">Next</button>
+				  </div>
+			  </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+  
+<link rel="stylesheet" href="{base}/aset/css/croppie.css" />
+<script src="{base}/aset/js/croppie.js"></script>
+
+<script type="text/javascript">
+
+
+$( document ).ready(function() {
+	$('#data-personal').hide();
+	$('#next-btn').show();
+	$('#hasilcrop').hide();
+	$('#gantifoto').hide();
+
+	$('img.cr-image').attr('src', '{base}/aset/images/foto_karyawan/rix.jpg');
+	//console.log ($('#upload').val());
+    var $uploadCrop;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();          
+            reader.onload = function (e) {
+                $uploadCrop.croppie('bind', {
+                    url: e.target.result
+                });
+                $('.upload-foto').addClass('ready');
+            }           
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $uploadCrop = $('#upload-foto').croppie({
+        viewport: {
+            width: 100,
+            height: 150
+        },
+        boundary: {
+            width: 200,
+            height: 200
+        }
+    });
+
+    $('#upload').on('change', function () { readFile(this); });
+    $('.upload-result').on('click', function (ev) {
+        $uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'original'
+        }).then(function (resp) {
+            $('#imagebase64').val(resp);
+            //$('#form').submit();
+        });
+    });
+	
+	$('#crop').on('click', function(){
+		$uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'original'
+        }).then(function (resp) {itv3d
+			$('#upload-foto').hide();
+			$('#upload').hide();
+			$('#crop').hide();
+			$('#hasilcrop').show();
+			$('#gantifoto').show();
+            var cropnya = $('#imagebase64').val(resp);
+			$('#hasilcrop').html('<img src ='+cropnya.val()+'  class="profile-user-img img-responsive" style="height:auto;" />');
+			var apaini = $('#value_foto').val(cropnya.val());
+			console.log(apaini);
+        });
+	});
+	
+	$('#gantifoto').on('click', function(){
+			$('#upload-foto').show();
+			$('#upload').show();
+			$('#crop').show();
+			$('#hasilcrop').hide();
+			$('#gantifoto').hide();
+	});
+	
+	$('#next-personal').on('click', function(){
+			$('#data-personal').show();
+			$('#data-karyawan').hide(); 
+	});
+});
+</script>
+  
+<link rel="stylesheet" href="{base}/aset/bower_components/AdminLTE/plugins/datepicker/datepicker3.css">
+<script src="{base}/aset/bower_components/AdminLTE/plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script>
+  //Date picker
+    $('.ambiltanggal').datepicker({
+		autoclose: true,
+		format: 'yyyy-mm-dd',
+    });
+  </script>

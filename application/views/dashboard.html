@@ -1,0 +1,159 @@
+      <section class="content-header text-center">
+        <h1> 
+          <img class="brand" src="http://surwaytech.com/blog/wp-content/uploads/2012/11/cropped-surway-cctv-camera1.jpg" alt="Banner"> 
+        </h1>
+      </section>
+
+	<!-- Main content -->
+	<section class="content text-center" id="product">
+		<div class="box box-danger">
+				<div class="box-header bg-red">
+					<h3 class="box-title"><i class="fa fa-cube"></i> Products</h3>
+				</div>
+				<div class="box-header with-border text-left">
+					<div class="row">
+						
+		<!-- <form action="" method="GET" class="form-horizontal"> -->
+						<!-- <div class="col-md-12"> -->
+							<!-- <div class="input-group"> -->
+								<!-- <div class="gabung"> -->
+							  <!-- <input type="text" name="q" class="form-control" placeholder="Search..."> -->
+									  <!-- <select name="produk_kategori" class="form-control"> -->
+										<!-- <option value="0">Semua Kategori</option> -->
+                    					<!-- <option value="1">Outdoor</option> -->
+                    					<!-- <option value="2">Indoor</option> -->
+                    					<!-- <option value="3">Aksesoris</option> -->
+									  <!-- </select> -->
+									  <!-- <select name="produk_jenis" class="form-control"> -->
+										<!-- <option value="0">Semua Jenis</option> -->
+                    					<!-- <option value="1">Analog</option> -->
+                    					<!-- <option value="2">HD</option> -->
+                    					<!-- <option value="3">Analog HD</option> -->
+                    					<!-- <option value="4">IP Cam</option> -->
+									  <!-- </select> -->
+									<!-- </div> -->
+								  <!-- <span class="input-group-btn"> -->
+									<!-- <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> Cari -->
+									<!-- </button> -->
+								  <!-- </span> -->
+							<!-- </div> -->
+						<!-- </div> -->
+						  <!-- </form>-->
+		
+					</div>
+				</div>
+				<div class="box-body">
+					<div class="container-fluid collection">
+						<div class="row">
+							{all_produk}
+								<div class="col-md-3  col-xs-6">
+									<div class="produk">
+										<a href="{base}/produk/detail/{produk_id}">
+										<img src="{base}/aset/images/produk/{produk_foto}" width="100%"> 
+										<div class="opsi-produk">
+											<span class="nama-produk">
+												<span class="nama-produk"> {produk_nama} </span> 
+											</span>
+										</div>
+										</a>
+									</div>
+								</div>
+							{/all_produk}
+						</div>
+					</div>
+				</div>
+				<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+		</div>
+	</section> 
+	
+	<section class="content text-center" id="paket">
+		<div class="box box-danger">
+				<div class="box-header bg-red">
+					<h3 class="box-title"><i class="fa fa-cube"></i> Paket CCTV </h3>
+				</div> 
+				<div class="box-body">
+					<div class="container-fluid collection">
+						<div class="row">
+							<div class="table-responsive">
+								{all_paket}
+								<div class="col-md-4 col-sm-4 col-xs-4">
+									<div class="box box-danger paket">
+										<div class="box-header bg-red">
+											<h3 class="box-title">{paket_nama}</h3>
+										</div>
+										<div class="box-body">
+											{paket_dvr}
+										</div>
+										<div class="box-body">
+											<b>{paket_kamera}</b> HD Cam
+										</div>
+										<div class="box-body">
+										   Kabel  <b>{paket_kabel}</b> M
+										</div>
+										<div class="box-body">
+											<b>{paket_hdd}</b> GB
+										</div>
+										<div class="box-body">
+											<a href="tel:+6285710021257" class="btn btn-primary">Call</a>
+										</div>
+									</div>
+									
+									<!---div class="opsi-produk">
+										<span class="nama-produk">
+												<button onclick="window.open('https://api.whatsapp.com/send?phone=6285246132362&text=Hi,%20Saya%20Mau%20tanya%20Paket CCTV')" class="btn btn-success">Whatsapp</button>
+										</span>
+									</div--->
+								</div>
+								{/all_paket}
+							</div>
+						</div>
+					</div>
+				</div>
+				<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+		</div>
+	</section> 
+	<section class="content text-center" id="tentang">
+		<div class="box box-danger">
+			<div class="box-header bg-red">
+				<h3 class="box-title"><i class="fa fa-cube"></i> Tentang Kami </h3>
+			</div> 
+			<div class="box-body text-justify">
+				<div class="col-md-5">
+				<p><strong>inCCTV Balikpapan</strong> adalah jasa sistem keamanan yang berada di Kota Balikpapan, jasa pelayanan kami bergerak di bidang :</p>
+						<ol>
+							<li> CCTV</li>
+							<li> Jaringan Komputer (LAN, WLAN, / Wifi)</li>
+							<li>Alarm System</li>
+							<li>Elektrikal</li>
+							<li>Mekanikal</li>
+							<li>GPS Tracker</li>
+							<li>Fingerprint</li>
+							<li>SMS Gateway</li>
+						</ol>
+				 
+				</div>
+				<div class="col-md-7"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8701661929044!2d116.89759361380185!3d-1.2491343359367595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df145d24740ced9%3A0x711934f177a1e7cd!2sJl.+Wirayudha+X%2C+Sepinggan%2C+Balikpapan+Sel.%2C+Kota+Balikpapan%2C+Kalimantan+Timur+76115!5e0!3m2!1sen!2sid!4v1537664571797" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+					 
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="content text-center" id="kontak">
+		<div class="panel bg-navy"> 
+			<div class="panel-body"> 
+				<div class="col-md-7">
+					<h2 class="box-h2" style="font-weight : 800;">Tunggu Apalagi ?</h2>
+					<h3 style="font-size:16pt;">Yuk, Langsung Saja Hubungi Kami</h3>
+				</div>
+				<div class="col-md-5">
+					<a style="margin-top: 0;" target="_blank" href="https://api.whatsapp.com/send?phone=6282153411611&text=Hi%20,%20inCCTV%20....." class="btn btn-success btn-block">
+						<i class="fa fa-whatsapp"></i> WhatsApp : 082153411611
+					</a>
+					<a href="tel:085710021257" class="btn btn-danger btn-block ">
+						<i class="fa fa-phone"></i> HP : 085710021257
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,263 @@
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    {breadcrum}
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+		{detail_karyawan}
+      <div class="col-md-4"> 
+	  <div class="box box-primary">
+            <div class="box-body box-profile">
+              <img style="width:200px;height:200px;" class="profile-user-img img-responsive img-circle" src="{base}/aset/images/foto_karyawan/{foto}" alt="User profile picture">
+
+              <h3 class="profile-username text-center">{nama_lengkap}</h3>
+
+              <p class="text-muted text-center">{karyawan_nik}</p>
+
+              <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <b>Jabatan</b> <p class="pull-right">{jabatan_nama}</p>
+                </li>
+                <li class="list-group-item">
+                  <b>Lokasi</b> <p class="pull-right">{nama_kantor_penempatan}</p>
+                </li>
+                <li class="list-group-item">
+                  <b>Dept / Project</b> <p class="pull-right">{project_nama}</p>
+                </li>
+                <li class="list-group-item">
+                  <b>Sejak</b> <p class="pull-right">{tanggal_diterima}</p>
+                </li>
+                <li class="list-group-item">
+                  <b>Phone</b> <p class="pull-right">{hp}</p>
+                </li>
+                <li class="list-group-item">
+                  <b>Email</b> <p class="pull-right">{email}</p>
+                </li>
+                <li class="list-group-item">
+                  <b>Status Karyawan</b> <p class="pull-right">{status_karyawan}</p>
+                </li>
+                <li class="list-group-item">
+                  <b>Perusahaan</b> <p class="pull-right">{perusahaan}</p>
+                </li>
+              </ul>
+
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+	  
+      <div class="col-md-6"> 
+			<div class="box box-primary">
+				<div class="box-header"> 
+					<h3 class="box-title"> Biodata</h3>
+				</div>
+				<div class="box-body box-profile"> 
+				
+
+				  <ul class="list-group list-group-unbordered">
+					<li class="list-group-item">
+					  <b>TTL</b> <p class="pull-right ">{tempat_lahir}, {tanggal_lahir} 
+					</li>
+					<li class="list-group-item">
+					  <strong>Alamat KTP</strong> <p>{alamat_ktp}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Alamat Tinggal</b> <p>{alamat_tinggal}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Jenis Kelamin</b> <p class="pull-right">{jenis_kelamin}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Agama</b> <p class="pull-right">{agama}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Suku</b> <p class="pull-right">{suku}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Gol. Darah</b> <p class="pull-right">{darah}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Pendidikan Terakhir</b> <p class="pull-right">{pendidikan_terakhir}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Asal Kelulusan</b> <p class="pull-right">{tempat_lulus}, Tahun : {tahun_lulus}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Jurusan Pendidikan</b> <p class="pull-right">{jurusan_pendidikan}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>BPJS Ketenagakerjaan</b> <p class="pull-right">{bpjs_tk}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>BPJS Kesehatan</b> <p class="pull-right">{bpjs_kesehatan}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>NPWP</b> <p class="pull-right">{npwp}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Status Pajak</b> <p class="pull-right">{status_pajak}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Status Pernikahan</b> <p class="pull-right">{status_kawin}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Jumlah Anak</b> <p class="pull-right">{jumlah_anak}</p>
+					</li>
+					<li class="list-group-item">
+					  <b>Nama Pasangan</b> <p class="pull-right">{nama_pasangan}</p>
+					</li> 
+					<li class="list-group-item">
+					  <b>No. Darurat</b> <p class="pull-right">{pemilik_no_darurat} : <a telp:{no_darurat}> {no_darurat}</a></p>
+					</li>
+					<li class="list-group-item">
+					  <b>Keterangan</b> <p class="pull-right">{keterangan}</p>
+					</li>
+				  </ul> 
+				</div>
+				<!-- /.box-body -->
+			</div>
+      </div>
+	  
+      <div class="col-md-2">  
+		  <div class="col-md-12">  
+			<button class="btn btn-primary btn-block" onclick="window.location='{base}/{class}'"><i class="fa fa-arrow-left"></i> Kembali </button>
+			<button class="btn btn-warning btn-block" onclick="window.location='{base}/{class}/edit/{karyawan_id}'" disabled><i class="fa fa-pencil"></i> Edit </button>
+			<button class="btn btn-danger btn-block" onclick="window.location='{base}/{class}/delete/{karyawan_id}'"><i class="fa fa-trash"></i> Delete </button>
+		  </div>
+	  </div>
+	  
+      <div class="col-md-12"> 
+			<div class="box box-primary">
+				<div class="box-header"> 
+					<h3 class="box-title"> Keluarga Karyawan</h3>
+				</div>
+				<div class="box-body box-profile"> 
+					<table class="table">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>Nama Lengkap</th>
+								<th>Status Keluarga</th>
+							</tr>
+						</thead>
+						<tbody>
+						{keluarga_personal}
+							<tr>
+								<td>{nomor}</td>
+								<td>{keluarga_personal_nama}</td>
+								<td>{keluarga_personal_status}</td>
+							</tr>
+						{/keluarga_personal}
+						</tbody>
+					</table>
+				</div>
+			</div>
+      </div>
+      <div class="col-md-12"> 
+			<div class="box box-primary">
+				<div class="box-header"> 
+					<h3 class="box-title"> Sertifikat Karyawan</h3>
+				</div>
+				<div class="box-body box-profile"> 
+					<table class="table">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>Nama Sertifikat</th>
+								<th>Nomor Sertifikat</th>
+								<th>Penerbit</th>
+								<th>Berlaku Sejak</th>
+								<th>Berlaku Sampai</th>
+								<th>Jenis</th>
+							</tr>
+						</thead>
+						<tbody>
+						{sertifikat_karyawan}
+							<tr>
+								<td>{nomor}</td>
+								<td>{sertifikat_nama}</td>
+								<td>{sertifikat_nomor}</td>
+								<td>{sertifikat_penerbit}</td>
+								<td>{sertifikat_terbit}</td>
+								<td>{sertifikat_expired}</td>
+								<td>{sertifikat_kategori}</td>
+							</tr>
+						{/sertifikat_karyawan}
+						</tbody>
+					</table>
+				</div>
+			</div>
+      </div>
+	  
+      <div class="col-md-12"> 
+			<div class="box box-primary">
+				<div class="box-header"> 
+					<h3 class="box-title"> Status Pegawai</h3>
+				</div>
+				<div class="box-body box-profile"> 
+					<table class="table">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>Nama Kontrak</th>
+								<th>Kontrak Mulai</th>
+								<th>Kontrak Selesai</th> 
+							</tr>
+						</thead>
+						<tbody>
+						{kontrak_karyawan}
+							<tr>
+								<td>{nomor}</td>
+								<td>{nama_kontrak}</td>
+								<td>{kontrak_mulai}</td>
+								<td>{kontrak_selesai}</td>
+							</tr>
+						{/kontrak_karyawan}
+						</tbody>
+					</table>
+				</div>
+			</div>
+      </div>
+	  
+      <div class="col-md-12"> 
+			<div class="box box-primary">
+				<div class="box-header"> 
+					<h3 class="box-title">Pendidikan</h3>
+				</div>
+				<div class="box-body box-profile"> 
+					<table class="table">
+						<thead>
+							<tr>
+								<th class="text-center">No.</th>
+								<th class="text-center">Nama Pendidikan</th>
+								<th class="text-center">Jurusan</th>
+								<th class="text-center">Nilai Ijazah</th> 
+								<th class="text-center">Tahun Kelulusan</th> 
+							</tr>
+						</thead>
+						<tbody>
+						{pendidikan_personal}
+							<tr>
+								<td class="text-center">{nomor}</td>
+								<td>{pendidikan_nama}</td>
+								<td class="text-center">{pendidikan_jurusan}</td>
+								<td class="text-center">{pendidikan_nilai}</td>
+								<td class="text-center">{pendidikan_lulus}</td>
+							</tr>
+						{/pendidikan_personal}
+						</tbody>
+					</table>
+				</div>
+			</div>
+      </div>
+	  
+		{/detail_karyawan}
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

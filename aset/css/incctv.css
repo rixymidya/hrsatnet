@@ -1,0 +1,98 @@
+.cawa{
+	display : none;
+}
+.produk {
+    border: 1px solid #e0dfdf;
+    display: block;
+    padding: 5px;
+    padding-bottom: 0;
+}
+.nama-produk {
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 600;
+    font-size: 11pt;
+    display: block;
+    padding: 2%;
+}
+.produk img {
+    border: 1px solid #e0dfdf; 
+}
+.box-h2{
+	font-size : 20pt;
+	margin : 0;
+	line-height : 1;
+}
+.box-h3{
+	font-size : 14pt;
+	margin : 0;
+	line-height : 1;
+	font-weight : 600;
+}
+.detil_fitur ul  li{
+	font-size : 12pt;
+}
+.detil_fitur ul {
+    line-height: 26px;
+    list-style-type: disc;
+}
+
+.labelkategori{
+	font-size : 13pt;
+}
+.arrow_back {
+    display : none;
+}
+.arrow_back  a{
+	color : #eee;
+}
+@media (max-width: 720px) {
+	.paket > .box-body, .paket > .box-header > .box-title {
+		font-size: 9pt;
+	}
+	 .paket > .box-header > .box-title{
+		 font-weight : 600;
+	}
+	.arrow_back {
+		display : inline;
+		position: absolute;
+		margin-left: 3%;
+		line-height: 0;
+		font-size: 9pt;
+		padding: 3px;
+	}
+	 
+}
+#client img {
+    margin: 5% 0;
+    vertical-align: middle;
+    min-height: 4rem;
+}
+#kontak > .panel{
+	padding : 5% 0;
+}
+#kontak > .panel a {
+    margin: 20px 0;
+}
+#kontak >.panel h3 {
+    margin: 35px 0;
+}
+@media (max-width: 960px) {
+	body{
+		margin-bottom: 55px;
+	}
+	.cawa{
+		display : inline;
+		position : fixed;
+		bottom : 0;
+		right : 0;
+		left : 0;
+		z-index : 999;
+		background: #fff; 
+		padding: 10px;
+		box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+	}
+	#client img {
+		min-height: auto;
+	}
+}

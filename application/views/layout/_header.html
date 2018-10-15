@@ -1,0 +1,73 @@
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="{base}" class="navbar-brand">
+		    <h1 class="namaweb">
+				{nama_app}
+			</h1>
+		  </a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left menuatas" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{base}">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="{base}/#product">Produk</a></li> 
+            <li><a href="{base}/#paket">Paket</a></li> 
+            <li><a href="{base}/#tentang">Tentang Kami</a></li>
+            <!-- <li><a href="{base}/#hubungi">Hubungi Kami</a></li> -->
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu btn-chat" style="margin-right: 16px;">
+			<!-- <button class="btn btn-sm btn-block" data-toggle="modal" data-target="#btnChat"> -->
+                <!-- <i class="fa fa-comments"></i>  -->
+				<!-- <span class="text">Live Chat!</span> -->
+			<!-- </button> -->
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header> 
+<div class="cawa">
+	<div class="col-md-6 col-xs-6">
+		<a target="_blank" href="https://api.whatsapp.com/send?phone=6282153411611&text=Hi%20,%20inCCTV%20....." class="btn btn-success btn-block">
+			<i class="fa fa-whatsapp"></i> Chat WA
+		</a>
+	</div>
+	<div class="col-md-6 col-xs-6">
+		<a href="tel:085710021257" class="btn btn-primary btn-block ">
+			<i class="fa fa-phone"></i> Telpon
+		</a>
+	</div>
+</div>
+  	
+<!-- Modal -->
+<div class="modal fade" id="btnChat" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="border: 3px solid cornflowerblue;border-radius: 2px;">
+    <div class="modal-content">
+      <div class="modal-header text-center text-bold text-aqua">
+        <h2 class="modal-title" id="exampleModalLongTitle"> <i class="fa fa-comments"></i>  Live Chat</h2>
+      </div>
+      <div class="modal-body">
+			<div class="container-fluid"> 
+				<div class="btncs">
+					<button class="btn btn-sm btn-success" onclick="window.open('https://api.whatsapp.com/send?phone=6282153411611&text=Hi,%20Saya%20Mau%20Tanya%20CCTV')">
+						<i class="fa fa-whatsapp"></i> 
+						<span class="text">Customer Service</span>
+					</button>
+				</div>
+			</div>
+	  </div>
+      <div class="text-center" style="padding:15px;">
+        <button type="button" class="btn btn-secondary text-center btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

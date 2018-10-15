@@ -1,0 +1,70 @@
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    {breadcrum}
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+      <div class="col-md-12">
+		<div class="box">
+			<form method="POST" action="">
+				<div class="box-header">
+				  <h3 class="box-title">Periode : {periode}</h3>
+				  <!-- <button class="btn btn-primary btn-sm pull-right" onclick="window.location='{base}/{class}/add'"> -->
+					<!-- <i class="fa fa-plus"></i> Tambah {class} -->
+				  <!-- </button> -->
+
+				  <!-- <div class="box-tools"> -->
+					<!-- <ul class="pagination pagination-sm no-margin pull-right"> -->
+					  <!-- <li><a href="#">«</a></li> -->
+					  <!-- <li><a href="#">1</a></li> -->
+					  <!-- <li><a href="#">2</a></li> -->
+					  <!-- <li><a href="#">3</a></li> -->
+					  <!-- <li><a href="#">»</a></li> -->
+					<!-- </ul> -->
+				  <!-- </div> -->
+				</div>
+				<!-- /.box-header --> 
+				<div class="box-body no-padding text-center"> 
+					<div class="col-md-12"> 
+						<div class="table-responsive">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th class="text-center">No</th>
+										<th class="text-center">NIK</th>
+										<th class="text-center">Nama</th>
+										<th class="text-center">Tanggal</th>
+									</tr>
+								</thead>
+								<tbody>
+	{all_karyawan}					
+									<tr>
+										<td >{nomor}</td>
+										<td>{karyawan_nik}</td>
+										<td>{nama_lengkap}</td>
+										
+										
+									</tr>	
+	{/all_karyawan}					
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="box-footer"> 
+					<div class="col-md-offset-4 col-md-4">  
+						<button class="btn btn-primary btn-block"> Cari Periode </button>
+					</div>
+				</div>
+			</form>
+		</div>
+      </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
