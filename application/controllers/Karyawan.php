@@ -286,6 +286,9 @@ class Karyawan extends MY_Controller {
 									case 5:
 										$value->agama ='Budha';
 									break;
+									case 6:
+										$value->agama ='Kong Hu';
+									break;
 									default :
 										$value->agama ='-';
 									break;
@@ -372,7 +375,7 @@ class Karyawan extends MY_Controller {
 									case 2:
 										$value->status_kawin ='Menikah';
 									break; 
-									case 2:
+									case 3:
 										$value->status_kawin ='Pernah Menikah';
 									break; 
 									default :
